@@ -9,7 +9,7 @@ function bulbOff() {
 function convertToDollar() {
   var Dollar = document.getElementById("dollar").value;
   var result = document.getElementById("result");
- 
+
   if (Dollar == "") {
     result.innerHTML = "plz Enter a value";
     return false;
@@ -19,6 +19,9 @@ function convertToDollar() {
   } else if (Dollar == 0) {
     result.innerHTML = "Enter number rether than zero";
     return false;
+  } else if (isNaN(Dollar)) {
+    result.innerHTML = "plz Enter a value";
+    return false ;
   } else {
     result.innerHTML = Dollar * 50 + " Egyption pound";
     return false;
